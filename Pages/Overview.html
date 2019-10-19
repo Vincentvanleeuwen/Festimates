@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="../Media/Images/icon.png">
+  <title>FestiMates</title>
+  <link rel="stylesheet" href="../Css/Style.css">
+</head>
+<body>
+  <header>
+    <a class="icon-plus" id="modal-button">
+      <img class="icon-plus" src="../Media/Icons/Plus.svg" alt="Add Festival Icon">
+    </a>
+    <h1 class="header-logo">Festimates</h1>
+    <a class="icon-cog" href="./Account.html">
+      <img class="icon-cog" src="../Media/Icons/Cog.svg" alt="Profile Icon">
+    </a>
+  </header>
+
+  <main>
+    <section class="festival-nav">
+      <button class="festival-tab active" onclick="openFestivals(event, 'all')">Festivals</button>
+      <button class="festival-tab" onclick="openFestivals(event, 'mine')">Joined Groups</button>
+    </section>
+
+    <section id="all" class="festival-container">
+      <a class="clickable-festival" href="Festival.html">
+        <section class="festival">
+          <section class="festival-content-container">
+
+            <h2 class="festival-name"> Liquicity Winter Festival</h2>
+            <section class="group-container">
+              <p class="group-count">5</p>
+              <p class="group-text">Groups</p>
+            </section>
+          </section>
+        </section>
+      </a>
+      <a class="clickable-festival" href="Festival.html">
+      <section class="festival">
+          <section class="festival-content-container">
+
+            <h2 class="festival-name"> Cheeky Monday</h2>
+            <section class="group-container">
+              <p class="group-count">2</p>
+              <p class="group-text">Groups</p>
+            </section>
+          </section>
+      </section>
+      </a>
+      <a class="clickable-festival" href="Festival.html">
+      <section class="festival">
+        <section class="festival-content-container">
+
+          <h2 class="festival-name"> DVINE </h2>
+          <section class="group-container">
+            <p class="group-count">3</p>
+            <p class="group-text">Groups</p>
+          </section>
+        </section>
+      </section>
+      </a>
+      <a class="clickable-festival" href="Festival.html">
+      <section class="festival">
+        <section class="festival-content-container">
+
+          <h2 class="festival-name"> Monstercat Uncaged</h2>
+          <section class="group-container">
+            <p class="group-count">8</p>
+            <p class="group-text">Groups</p>
+          </section>
+        </section>
+      </section>
+      </a>
+      <a class="clickable-festival" href="Festival.html">
+      <section class="festival">
+        <section class="festival-content-container">
+          <h2 class="festival-name"> Viper Showcase </h2>
+          <section class="group-container">
+            <p class="group-count">3</p>
+            <p class="group-text">Groups</p>
+          </section>
+        </section>
+      </section>
+      </a>
+      <a class="clickable-festival" href="Festival.html">
+      <section class="festival">
+        <section class="festival-content-container">
+
+          <h2 class="festival-name"> Netsky and Friends </h2>
+          <section class="group-container">
+            <p class="group-count">4</p>
+            <p class="group-text">Groups</p>
+          </section>
+        </section>
+      </section>
+      </a>
+      <a class="clickable-festival" href="Festival.html">
+      <section class="festival">
+        <section class="festival-content-container">
+
+          <h2 class="festival-name"> Vroegah</h2>
+          <section class="group-container">
+            <p class="group-count">1</p>
+            <p class="group-text">Group</p>
+          </section>
+        </section>
+      </section>
+      </a>
+      <a class="clickable-festival" href="Festival.html">
+      <section class="festival">
+        <section class="festival-content-container">
+
+          <h2 class="festival-name"> Deniro Barbara Ford</h2>
+          <section class="group-container">
+            <p class="group-count">1</p>
+            <p class="group-text">Group</p>
+          </section>
+        </section>
+      </section>
+      </a>
+      <a class="clickable-festival" href="Festival.html">
+      <section class="festival">
+        <section class="festival-content-container">
+
+          <h2 class="festival-name"> Guilty Pleasure</h2>
+          <section class="group-container">
+            <p class="group-count">2</p>
+            <p class="group-text">Groups</p>
+          </section>
+        </section>
+      </section>
+      </a>
+      <a class="clickable-festival" href="Festival.html">
+      <section class="festival">
+        <section class="festival-content-container">
+
+          <h2 class="festival-name"> Rookie Party</h2>
+          <section class="group-container">
+            <p class="group-count">3</p>
+            <p class="group-text">Groups</p>
+          </section>
+        </section>
+      </section>
+      </a>
+    </section>
+
+    <section id="mine" class="festival-container">
+      <section class="group">
+        <section class="group-content-container">
+          <img class="icon-up" src="../Media/Icons/ArrowUp.svg" alt="Add Festival Icon">
+          <h2 class="group-name"> Liquicity Winterfestival</h2>
+          <section class="people-container">
+            <p class="people-count">3/5</p>
+            <p class="people-text">People</p>
+          </section>
+        </section>
+      </section>
+      <section class="group-content">
+        <h2 class="group-name-overview"> Ravers </h2>
+        <section class="people">
+          <div><span>Mike </span><img src="../Media/Images/Squared-Avatar.jpg"></div>
+          <div><span>Maja </span> <img src="../Media/Images/Squared-Avatar-Girl.jpg"></div>
+          <div class="you"><span>You </span> <img src="../Media/Images/Squared-Avatar.jpg"></div>
+        </section>
+        <section class="group-buttons">
+          <a href="#"
+             class="whatsapp-button leave-group">
+            Leave Crew
+          </a>
+          <a href="https://www.facebook.com/events/455210084957133/"
+             class="whatsapp-button">
+            WhatsApp Group
+          </a>
+        </section>
+      </section>
+
+      <section class="group-done">
+        <section class="group-content-container">
+          <img class="icon-cancel small small-margin" src="../Media/Icons/Cancel.svg" alt="Cancel">
+          <h2 class="group-name"> Korsakov Indoor Festival</h2>
+          <section class="people-container">
+            <p class="people-count">8/8</p>
+            <p class="people-text">People</p>
+          </section>
+        </section>
+      </section>
+      <section class="group-content">
+        <h2 class="group-name-overview"> Bassheads</h2>
+        <section class="people">
+          <div><span>Zoe </span><img src="../Media/Images/Squared-Avatar-Girl.jpg"></div>
+          <div><span>Christian </span> <img src="../Media/Images/Squared-Avatar.jpg"></div>
+          <div><span>Dave </span> <img src="../Media/Images/Squared-Avatar.jpg"></div>
+          <div><span>Destiny </span> <img src="../Media/Images/Squared-Avatar-Girl.jpg"></div>
+          <div><span>Luna </span> <img src="../Media/Images/Squared-Avatar-Girl.jpg"></div>
+          <div><span>Bart </span> <img src="../Media/Images/Squared-Avatar.jpg"></div>
+          <div><span>Michael </span><img src="../Media/Images/Squared-Avatar.jpg"></div>
+        </section>
+        <section class="group-buttons">
+          <a href="#"
+             class="whatsapp-button join-group">
+            Join Crew
+          </a>
+          <a href="https://www.facebook.com/events/455210084957133/"
+             class="whatsapp-button">
+            WhatsApp Group
+          </a>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <footer class="overview-footer">
+    <section class="info-nav">
+      <a href="Venues.html" class="info-button">
+        Venues
+      </a>
+
+      <a href="Safety.html" class="info-button">Safety</a>
+    </section>
+  </footer>
+
+  <section id="myModal" class="modal">
+    <!-- Modal content -->
+    <section class="modal-content">
+      <span class="close">&times;</span>
+      <h2> Create a new Festival</h2>
+      <form>
+        <input type="text" placeholder="Festival Name">
+        <input type="text" placeholder="Date" onfocus="(this.type='date')" onblur="(this.type='text')" class="group-size">
+        <input type="text" placeholder="Time" onfocus="(this.type='time')" onblur="(this.type='text')" class="group-size">
+        <input type="number" placeholder="Age" class="group-size">
+        <input type="text" placeholder="Facebook Link">
+        <input type="submit" value="Create" class="create-group-button">
+      </form>
+    </section>
+  </section>
+
+  <script src="../Js/Functions.js"></script>
+</body>
+</html>

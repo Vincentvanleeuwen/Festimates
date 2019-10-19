@@ -1,0 +1,1205 @@
+/*================================= FONTS ==================================== */
+@font-face {
+  font-family: DDCHardware;
+  src: url('../Media/Fonts/DDCHardware-Regular.otf');
+}
+@font-face {
+  font-family: RobotoThin;
+  src: url('../Media/Fonts/Roboto-Thin.ttf');
+}
+@font-face {
+  font-family: RobotoLight;
+  src: url('../Media/Fonts/Roboto-Light.ttf');
+}
+@font-face {
+  font-family: OpenSansBold;
+  src: url('../Media/Fonts/OpenSans-Bold.ttf');
+}
+@font-face {
+  font-family: 'fontello';
+  src: url('../Media/Fonts/fontello.eot?29137307');
+  src: url('../Media/Fonts/fontello.eot?29137307#iefix') format('embedded-opentype'),
+  url('../Media/Fonts/fontello.woff?29137307') format('woff'),
+  url('../Media/Fonts/fontello.ttf?29137307') format('truetype'),
+  url('../Media/Fonts/fontello.svg?29137307#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*============================================================================== */
+
+/*================================= VARIABLES ===================================*/
+
+:root {
+  --background: #f8f2e3;
+  --check-box: #824242;
+  --main-red: #b33e3e;
+  --dark-red: #501010;
+  --search-bar: #763030;
+  --call-to-action: #3EB35F;
+}
+
+/*============================================================================== */
+
+/*================================= GENERAL ==================================== */
+/*Icons*/
+.icon-search{
+  height: 20px;
+  position: relative;
+  left: 50px;
+  top: 2px;
+}
+.icon-done {
+  height: 35px;
+  margin-top: 4px;
+}
+.icon-cancel  {
+  height: 35px;
+  width: 35px;
+}
+.icon-ok:before { content: '\e803'; }
+
+.icon-cog {
+  height: 35px;
+}
+
+.icon-back {
+  height: 35px;
+  width: 35px;
+}
+.icon-logout:before { content: '\e806'; }
+
+.icon-plus{
+  height:25px;
+}
+.icon-up {
+  height: 35px;
+  width: 35px;
+}
+.icon-down {
+  height: 35px;
+  width: 35px;
+}
+.small {
+  width: 15px!important;
+  height: 15px!important;
+}
+.small-margin {
+  margin-left: 10px;
+}
+.no-icon {
+  visibility: hidden;
+  width: 35px;
+  height: 35px;
+}
+/*Icons End*/
+
+* {
+  font-family: RobotoLight, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: DDCHardware, sans-serif;
+}
+h2 {
+  font-family: OpenSansBold, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  height: 640px;
+  width: 360px;
+  margin: 0 auto;
+
+}
+
+header {
+  background-color: var(--main-red);
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-logo {
+  color: white;
+  font-weight: normal;
+  font-size: 2.3em;
+}
+/*=================================================================================== */
+
+/*================================= SPLASHSCREEN ==================================== */
+.splash-container {
+  background-image: url("../Media/Images/Splashscreen.jpg");
+  height: 640px;
+  width: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.splash-content {
+  height: 150px;
+
+}
+.splash-header {
+  color: white;
+  font-size: 3em;
+  margin-bottom: 1em;
+
+}
+.progress-bar {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.progress-bar::-webkit-progress-bar {
+  background-color: #661919;
+}
+
+.progress-bar::-webkit-progress-value {
+  background-color: #4d7844;
+  transition: width 0.5s ease;
+}
+/*================================================================================ */
+
+/*================================= LOGIN ================================= */
+.login-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*background-color: var(--main-red);*/
+  background-image: url('../Media/Images/Splashscreen.jpg');
+  width: 100%;
+  height: 100%;
+
+
+}
+.login-page{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  width: 80%;
+  height: 100%;
+  color: white;
+}
+.login-page h1 {
+  font-size: 3em;
+  margin-top: 40px;
+}
+.login-page h2 {
+  font-family: OpenSansBold, sans-serif;
+}
+.login-page form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-page form input {
+  width: 250px;
+  margin: 15px 0;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  opacity: 0.9;
+  background-color: var(--background);
+  color: #383838;
+
+  font-family: RobotoRegular, sans-serif;
+}
+.login-page form input[type="submit"] {
+  margin-top: 10px!important;
+  color: var(--background);
+  width: 60%;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: OpenSansBold, sans-serif;
+}
+.login-page input:focus {
+  transition: 0.35s ease;
+  background-color: #3c3c3c;
+  color: white;
+}
+.login-page input:focus::placeholder{
+  color: white;
+}
+.login-page input::placeholder{
+  color: #383838;
+}
+
+.register {
+  position: relative;
+  width: 268px;
+  font-family: OpenSansBold, sans-serif;
+  font-size: 0.9em;
+}
+.register-button {
+  margin-left: 10px;
+  text-decoration: none;
+  color: var(--call-to-action);
+  font-family: OpenSansBold, sans-serif;
+
+}
+.skip {
+  text-decoration: none;
+  color: var(--background);
+}
+#success {
+  display: none;
+  position: absolute;
+  justify-content: center;
+  width: 60%;
+  background-color: rgba(62,179,95,0.8);
+  padding: 20px;
+  border: 5px solid rgba(0,0,0,0.8);
+  animation: disappear 2.5s;
+}
+#success h2 {
+  color: var(--background);
+  font-size: 1em;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-register {
+  margin: 20% auto;
+  padding: 20px;
+  width: 80%;
+  /*background-color: var(--main-red);*/
+  background-image: url('../Media/Images/Register-Modal.jpg');
+  color: white;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.modal-register h2 {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+.modal-register form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.modal-register form input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  text-align: center;
+  background-color: var(--background);
+  color: #383838;
+
+  font-family: RobotoThin, sans-serif;
+}
+.modal-register form input[type="submit"] {
+  color: var(--background);
+}
+.modal-register input:focus {
+  transition: 0.35s ease;
+  background-color: #4d7844;
+  color: white;
+}
+.modal-register input:focus::placeholder{
+  color: white;
+
+}
+.modal-register input::placeholder{
+  color: #383838;
+  text-align: center;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.modal-header h2 {
+  margin-left: 80px;
+  margin-bottom: 0;
+}
+
+.complete-registration {
+  margin-top: 50px!important;
+  width: 90% !important;
+  background-color: var(--call-to-action)!important;
+}
+.upload-avatar {
+  cursor: pointer;
+  position: relative;
+  top: 15px;
+  padding: 10px 50px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+
+  background-color: var(--search-bar);
+  color: var(--background);
+
+  font-family: RobotoThin, sans-serif;
+  font-size: 0.8em;
+}
+.upload-avatar span {
+  font-size: 0.6em;
+  line-height: 3px;
+}
+#upload-photo {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+/*================================================================================= */
+
+/*================================= ACCOUNT DETAILS ================================= */
+.account-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.account-page h2 {
+  background-color: var(--dark-red);
+  color: var(--background);
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  line-height: 45px;
+}
+.account-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+}
+.edit-choices {
+  text-decoration: none;
+  color: var(--background);
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: var(--call-to-action);
+  width: 60%;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: OpenSansBold, sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.change-pass {
+  margin: 25px 0;
+}
+.change-pass-button {
+  background-color: var(--main-red)!important;
+}
+.account-page form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.account-page form input {
+  width: 250px;
+  margin: 15px 0;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  opacity: 0.9;
+  background-color: white;
+  color: #383838;
+
+  font-family: RobotoRegular, sans-serif;
+}
+.account-page form input[type="submit"] {
+  margin-top: 10px!important;
+  color: var(--background);
+  width: 60%;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: OpenSansBold, sans-serif;
+}
+.account-page input:focus {
+  transition: 0.35s ease;
+  background-color: #3c3c3c;
+  color: white;
+}
+.account-page input:focus::placeholder{
+  color: white;
+}
+.account-page input::placeholder{
+  color: #383838;
+}
+/*=================================================================================== */
+
+/*================================= MUSIC SELECTION ================================= */
+
+.holder {
+  margin-left: 10px;
+}
+
+.instructions {
+  margin: 30px auto;
+  text-align: center;
+  color: #383838;
+}
+.instructions-h2 {
+  font-family: OpenSansBold, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.instructions-p {
+  font-family: RobotoThin, sans-serif;
+  font-size: 0.8em;
+  color: #383838;
+}
+input[type=search]{
+  content: '\e801';
+  padding: 10px 10px 10px 55px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: var(--search-bar);
+  font-family: RobotoThin, sans-serif;
+  font-size: 1.3em;
+  color: #b7b7b7;
+  width: 80%;
+  border: none;
+  outline: none;
+}
+input[type=search]:focus{
+  transition: 0.35s ease;
+  background-color: var(--call-to-action);
+  color: white;
+}
+
+input[type=search]::-webkit-search-cancel-button{
+
+  -webkit-appearance: none;
+}
+
+
+input[type=search]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+.music-container {
+  margin-top: 30px;
+
+}
+
+.choices {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.choice {
+  display: block;
+
+  width: 90%;
+  height: 40px;
+  margin-bottom: 15px;
+
+  background-color: var(--check-box);
+  color: white;
+
+  font-family: OpenSansBold, sans-serif;
+  font-size: 0.8em;
+  text-align: center;
+  line-height: 40px;
+}
+.active-element {
+  background-color: var(--call-to-action);
+}
+.active-element:after {
+  background-image: url(../Media/Icons/Selected.svg);
+}
+.choice-box {
+  -webkit-appearance: none;
+}
+#save-music-options {
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  background-color: var(--call-to-action);
+  border-top: 2px solid white;
+  bottom: 0;
+  display: none;
+  align-items: center;
+  animation: scroll-top 0.5s;
+}
+.save-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+
+}
+.save-text {
+  color: white;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+/*=================================================================================== */
+
+/*==================================== OVERVIEW ===================================== */
+/*Festival Nav*/
+.festival-nav {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+}
+
+.festival-tab {
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  outline: none;
+
+  background-color: var(--dark-red);
+  color: white;
+
+  font-family: OpenSansBold, sans-serif;
+  font-size: 1.3em;
+  text-align: center;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+.festival-tab:first-child {
+  border: none;
+}
+
+.festival-tab:hover {
+  background-color: #4d7844;
+}
+
+.festival-tab.active {
+  background-color: var(--call-to-action);
+}
+
+.festival-container:nth-child(1){
+  display: none;
+  padding: 6px 12px;
+}
+/*End Festival Nav*/
+
+/*Overview*/
+#all {
+  margin-bottom: 50px;
+}
+#mine {
+  display:none;
+}
+.festival-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 15px 0 30px 0;
+
+}
+.festival {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+  width: 90%;
+  background-color: #824242;
+  margin-bottom: 15px;
+}
+.clickable-festival {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+}
+.festival-content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.festival-name {
+  color: white;
+  font-size: 0.8em;
+
+}
+.group-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  /*background-color: #5f2f2f;*/
+  height: 100%;
+
+}
+.group-container p {
+  display: block;
+  font-family: RobotoLight, sans-serif;
+}
+.group-text {
+  font-size: 0.6em;
+}
+.group-count{
+  font-weight: bold;
+  font-size: 0.8em;
+}
+.group-name-overview {
+  color: white;
+  font-size: 2em;
+  text-align: center;
+
+}
+.leave-group {
+  background-color: #7c051d!important;
+  border: none!important;
+  height: 30px!important;
+  line-height: 10px!important;
+}
+.group-done {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+  width: 90%;
+  background-color: #7c051d;
+  margin-top: 15px;
+}
+/*End Festivals*/
+
+/*==============================================Festival==============================================*/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  margin: 20% auto;
+  padding: 20px;
+  width: 80%;
+  background-color: var(--main-red);
+  color: white;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.modal-content h2 {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+.modal-content form input {
+  width: 100%;
+  margin: 5px 0 5px 0;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+
+  background-color: var(--background);
+  color: #383838;
+
+  font-family: RobotoThin, sans-serif;
+}
+.modal-content form input[type="submit"] {
+  color: var(--background);
+}
+.modal-content input:focus {
+  transition: 0.35s ease;
+  background-color: #4d7844;
+  color: white;
+}
+.modal-content input:focus::placeholder{
+  color: white;
+}
+.modal-content input::placeholder{
+  color: #383838;
+}
+.group-size{
+  width: 45% !important;
+}
+.create-group-button {
+  margin-top: 30px!important;
+  background-color: var(--call-to-action)!important;
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.festival-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.festival-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  background-color: var(--dark-red);
+  color: white;
+}
+.festival-info {
+  margin: 30px 0 30px 0;
+  width: 80%;
+}
+.festival-info div {
+  display: flex;
+  justify-content: space-between;
+}
+.festival-info div p {
+  margin-top: 30px;
+  color: #383838;
+  font-family: RobotoThin, sans-serif;
+}
+.festival-info div span {
+  font-family: OpenSansBold, sans-serif;
+  margin-top: 30px;
+  color: #383838;
+
+}
+
+.facebook-button {
+  width: 150px;
+  height: 30px;
+  margin-top: 30px;
+  padding: 5px;
+  border-radius: 2px;
+
+  background-color: #3B5998;
+  color: white;
+
+  font-family: OpenSansBold, sans-serif;
+  font-size: 0.6em;
+  text-align: center;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+}
+
+.groups {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 30px;
+  background-color: var(--dark-red);
+  color: white;
+}
+
+.group {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+  width: 90%;
+  background-color: #824242;
+  border-bottom: solid 1px #4a2121;
+  margin-top: 15px;
+}
+.group-content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.group-name {
+  color: white;
+  font-size: 0.8em;
+
+}
+.people-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  /*background-color: #5f2f2f;*/
+  height: 100%;
+
+}
+.people-container p {
+  display: block;
+  font-family: RobotoLight, sans-serif;
+}
+.people-text {
+  font-size: 0.6em;
+}
+.people-count{
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.group-content {
+  display: none;
+  overflow: hidden;
+  transition: 0.5s;
+  width: 90%;
+  margin-bottom: 10px;
+  background-color: #824242;
+}
+.people {
+  padding-top: 15px;
+
+}
+.people div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  margin-bottom: 20px;
+}
+.people div:first-child {
+  margin-top: 10px;
+}
+.people div:last-child {
+  margin-bottom: 0;
+}
+.people div p {
+
+  color: white;
+  font-family: RobotoThin, sans-serif;
+}
+.people div span {
+  font-family: OpenSansBold, sans-serif;
+
+  color: white;
+
+}
+.people img {
+  height: 65px;
+  border-radius: 0;
+}
+.group-buttons {
+  display: flex;
+  justify-content: space-around;
+
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+}
+.whatsapp-button {
+  width: 150px;
+  height: 50px;
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 2px;
+  border: solid 4px var(--background);
+  background-color: #25d366;
+  color: white;
+
+  font-family: OpenSansBold, sans-serif;
+  font-size: 0.6em;
+  text-align: center;
+  line-height: 23px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+}
+#mine .whatsapp-button {
+  border: none;
+  height: 30px;
+  line-height: 10px;
+}
+.join-group {
+  background-color: #4d7844;
+  border: none;
+  height: 30px;
+  line-height: 10px;
+}
+
+.modal-join-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+}
+.modal-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(62,179,95,0.9);
+  border-radius: 5px;
+  color: var(--background);
+  width: 80%;
+  height: 200px;
+  text-align: center;
+  line-height: 30px;
+  font-family: OpenSansBold, sans-serif;
+}
+/*==============================================================================================*/
+
+
+/*============================================ Venues ==========================================*/
+
+.venue-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.venue-page h2 {
+  background-color: var(--dark-red);
+  color: var(--background);
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  line-height: 45px;
+}
+.venue-page p {
+  margin-top: 30px;
+  width: 80%;
+}
+.venues {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+
+}
+.venue-pair {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 25px;
+}
+.venue-pair a {
+  text-decoration: none;
+}
+.venue {
+  height: 50px;
+  width: 150px;
+  /*background-color: var(--main-red);*/
+  background-image: url("../Media/Images/Melkweg.jpg");
+  padding: 10px;
+  border: solid var(--main-red) 5px;
+
+
+  font-family: OpenSansBold, sans-serif;
+}
+.venue p {
+  margin: 0!important;
+  color: var(--background);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+  line-height: 25px;
+  font-family: OpenSansBold, sans-serif;
+  text-align: center;
+  width: 100%;
+}
+/*==============================================================================================*/
+/*===================================Venue Detail==================================*/
+.venue-detail-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.venue-detail-page h2 {
+  background-color: var(--dark-red);
+  color: var(--background);
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  line-height: 45px;
+}
+.venue-detail-page p {
+  margin-top: 30px;
+  width: 80%;
+}
+.venue-detail-page a {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  width: 150px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 2px;
+  background-color: var(--call-to-action);
+  color: white;
+  font-family: OpenSansBold, sans-serif;
+  font-size: 0.6em;
+  text-align: center;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.venue-detail-page img {
+  margin-top: 30px;
+}
+/*==============================================-------=============================================*/
+
+/*============================================== Safety =============================================*/
+
+.safety-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.safety-page h2 {
+  background-color: var(--dark-red);
+  color: var(--background);
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  line-height: 45px;
+}
+.safety-page p {
+  margin-top: 30px;
+  width: 80%;
+}
+.safety {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+
+}
+.safety-pair {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 25px;
+}
+.safety-pair a {
+  text-decoration: none;
+}
+.safe {
+  height: 50px;
+  width: 150px;
+  /*background-color: var(--main-red);*/
+  background-image: url("../Media/Images/Beer.jpg");
+  padding: 10px;
+  border: solid var(--main-red) 5px;
+
+
+  font-family: OpenSansBold, sans-serif;
+}
+.safe p {
+  margin: 0!important;
+  color: var(--background);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+  line-height: 25px;
+  font-family: OpenSansBold, sans-serif;
+  text-align: center;
+  width: 100%;
+}
+/*================================================================================================*/
+
+/*==============================================Footer=============================================*/
+.overview-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.info-nav {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+}
+
+.info-button {
+  width: 100%;
+  padding: 14px 16px;
+  border-left: 2px solid rgba(255,255,255,0.3);
+  outline: none;
+
+  background-color: var(--main-red);
+  color: white;
+
+  font-family: OpenSansBold, sans-serif;
+  font-size: 1.3em;
+  text-align: center;
+  text-decoration: none;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+.info-button:first-child {
+  border: none;
+}
+/*End Footer*/
+/*=================================================================================== */
+
+@keyframes scroll-top {
+  0% {
+    bottom: -100px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}

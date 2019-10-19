@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="../Media/Images/icon.png">
+  <title>FestiMates</title>
+  <link rel="stylesheet" href="../Css/Style.css">
+</head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '253230432016238',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v3.2'
+    });
+
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  };
+
+  (function(d, s, id){
+  let js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/en_US/sdk.js";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      console.log('Welcome!  Fetching your information.... ');
+      FB.api('/me', function (response) {
+        console.log('Successful login for: ' + response.name);
+        console.log('Thanks for logging in, ' + response.name + '!');
+      });
+    } else {
+      // The person is not logged into your app or we are unable to tell.
+      console.log('not logged in');
+    }
+  }
+
+</script>
+<header>
+  <a class="icon-plus" href="Overview.html">
+    <img class="icon-plus" src="../Media/Icons/Back.svg" alt="Add Festival Icon">
+  </a>
+  <h1 class="header-logo">Festimates</h1>
+  <a class="icon-cog" href="./Login.html" onclick="FB.logout(function(response) {});">
+    <img class="icon-cog" src="../Media/Icons/Log-Out.svg" alt="Profile Icon">
+  </a>
+</header>
+
+<main>
+  <section class="account-page">
+    <h2> Account Details </h2>
+    <section class="account-details">
+      <a href="./Music.html" class="edit-choices"> Edit Music Choices</a>
+
+      <form>
+        <input type="text" placeholder="Your Name">
+        <input type="text" placeholder="YourEmail@email.com">
+        <input type="number" placeholder="+31 6 12345678">
+        <input type="submit" value="Save" class="create-group-button">
+      </form>
+      <h2 class="change-pass"> Change Password </h2>
+      <form>
+        <input type="text" placeholder="Old Password">
+        <input type="text" placeholder="New Password">
+        <input type="text" placeholder="Confirm New Password">
+        <input type="submit" value="Change Password" class="change-pass-button">
+      </form>
+    </section>
+  </section>
+</main>
+
+<script src="../Js/Functions.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="../Media/Images/icon.png">
+  <title>FestiMates</title>
+  <link rel="stylesheet" href="../Css/Style.css">
+</head>
+<body>
+  <header>
+    <a class="icon-cancel" href="Login.html">
+      <img class="icon-cancel" src="../Media/Icons/Cancel.svg" alt="Cancel Icon">
+    </a>
+    <h1 class="header-logo">Festimates</h1>
+    <a href="Overview.html" class="check">
+      <!--<img id="confirm" class="icon-done" src="../Media/Icons/Confirm.svg" alt="Confirm Icon">-->
+    </a>
+  </header>
+
+  <main>
+    <section class="instructions">
+      <h2 class="instructions-h2"> Music Genres</h2>
+      <p class="instructions-p"> Choose your favourite music genre(s)</p>
+    </section>
+    <form class="search-container">
+      <div class="holder">
+        <img class="icon-search" src="../Media/Icons/Search.svg" alt="Search Icon">
+        <input class="search-bar"
+               type="search"
+               placeholder="Search Genre">
+      </div>
+    </form>
+
+    <section class="music-container">
+      <form class="choices">
+        <label class="choice"
+               for="dnb"
+               onclick="isActive(this.id)"
+               id="1"> Drum & Bass
+        <input class="choice-box"
+               type="checkbox"
+               name="dnb"
+               value="dnb"
+               id="dnb"
+               disabled>
+        </label>
+        <label class="choice"
+               for="ar"
+               onclick="isActive(this.id)"
+               id="2"> Alternative Rock
+          <input class="choice-box"
+                 type="checkbox"
+                 name="ar"
+                 value="ar"
+                 id="ar"
+                 disabled>
+        </label>
+        <label class="choice"
+               for="pr"
+               onclick="isActive(this.id)"
+               id="3"> Psychedelic Rock
+          <input class="choice-box"
+                 type="checkbox"
+                 name="pr"
+                 value="pr"
+                 id="pr"
+                 disabled>
+        </label>
+        <label class="choice"
+               for="hip"
+               onclick="isActive(this.id)"
+               id="4"> Hiphop
+          <input class="choice-box"
+                 type="checkbox"
+                 name="hip"
+                 value="hip"
+                 id="hip"
+                 disabled>
+        </label>
+        <label class="choice"
+               for="br"
+               onclick="isActive(this.id)"
+               id="5"> Big Room
+          <input class="choice-box"
+                 type="checkbox"
+                 name="br"
+                 value="br"
+                 id="br"
+                 disabled>
+        </label>
+        <label class="choice"
+               for="tr"
+               onclick="isActive(this.id)"
+               id="6"> Trap
+          <input class="choice-box"
+                 type="checkbox"
+                 name="tr"
+                 value="tr"
+                 id="tr"
+                 disabled>
+        </label>
+        <label class="choice"
+               for="rhb"
+               onclick="isActive(this.id)"
+               id="7"> Russian Hardbass
+          <input class="choice-box"
+                 type="checkbox"
+                 name="rhb"
+                 value="rhb"
+                 id="rhb"
+                 disabled>
+        </label>
+        <label class="choice"
+               for="met"
+               onclick="isActive(this.id)"
+               id="8"> Metal
+          <input class="choice-box"
+                 type="checkbox"
+                 name="met"
+                 value="met"
+                 id="met"
+                 disabled>
+        </label>
+        <label class="choice"
+               for="psy"
+               onclick="isActive(this.id)"
+               id="9"> Psytrance
+          <input class="choice-box"
+                 type="checkbox"
+                 name="psy"
+                 value="psy"
+                 id="psy"
+                 disabled>
+        </label>
+        <label class="choice"
+               for="ind"
+               onclick="isActive(this.id)"
+               id="10"> Indie
+          <input class="choice-box"
+                 type="checkbox"
+                 name="ind"
+                 value="ind"
+                 id="ind"
+                 disabled>
+        </label>
+        <label class="choice"
+               for="punk"
+               onclick="isActive(this.id)"
+               id="11"> Punk
+          <input class="choice-box"
+                 type="checkbox"
+                 name="punk"
+                 value="punk"
+                 id="punk"
+                 disabled>
+        </label>
+      </form>
+    </section>
+
+  </main>
+  <footer id="save-music-options">
+    <section class="save-container">
+      <h2 class="save-text"> Save your music options</h2>
+      <a href="Overview.html">
+        <img class="icon-done" src="../Media/Icons/Confirm-White.svg" alt="Confirm Icon">
+      </a>
+
+    </section>
+  </footer>
+
+  <script src="../Js/Functions.js"></script>
+</body>
+</html>

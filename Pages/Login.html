@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="../Media/Images/icon.png">
+  <title>FestiMates</title>
+  <link rel="stylesheet" href="../Css/Style.css">
+</head>
+<body>
+  <main class="login-main">
+    <section class="login-page">
+      <h1> FestiMates</h1>
+      <h2> Sign In </h2>
+      <form>
+        <input type="text" placeholder="E-mail address">
+        <input type="text" placeholder="Password">
+        <input type="submit" value="Login" class="create-group-button">
+        <a class="skip" href="Music.html"> Skip for now</a>
+      </form>
+      <h2> Or </h2>
+
+      <div class="fb-login-button"
+           data-max-rows="1"
+           data-size="medium"
+           data-button-type="continue_with"
+           data-show-faces="false"
+           data-auto-logout-link="false"
+           data-use-continue-as="true">
+      </div>
+      <p class="register"> Don't have an account yet? <a class="register-button" id="modal-button">Register</a></p>
+    </section>
+
+    <section id="success">
+      <h2> Succesfully created your account</h2>
+    </section>
+  </main>
+
+  <section id="myModal" class="modal">
+    <!-- Modal content -->
+    <section class="modal-register">
+      <section class="modal-header">
+        <h2> Register</h2>
+        <span class="close">&times;</span>
+      </section>
+      <form method="post">
+        <input type="text" placeholder="Name">
+        <input type="number" placeholder="Age">
+        <input type="text" placeholder="Password">
+        <input type="text" placeholder="Confirm Password">
+        <label class="upload-avatar" for="upload-photo">Upload a Photo <span> (Max 100mb)</span></label>
+        <input type="file" name="photo" id="upload-photo" />
+        <input type="submit" value="Create Account" class="complete-registration" onclick="document.getElementById('success').display ='flex'">
+      </form>
+    </section>
+  </section>
+
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '253230432016238',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v3.2'
+      });
+
+      FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+        FB.login(function(response) {
+          if (response.authResponse) {
+//            window.location.href="Music.html";
+          }
+        });
+      });
+
+    };
+
+    (function(d, s, id){
+      let js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    function statusChangeCallback(response) {
+      if(response.status === 'connected') {
+        console.log('Logged in and Authenticated');
+        window.location.href="Music.html";
+      }
+      else {
+        console.log('Not Connected');
+        FB.XFBML.parse();
+      }
+    }
+  </script>
+  <script src="../Js/Functions.js"></script>
+</body>
+</html>

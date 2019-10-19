@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="./Media/Images/icon.png">
+  <title> FestiMates </title>
+  <link rel="stylesheet" href="./Css/Style.css">
+</head>
+<body>
+  <main class="splash-container">
+    <section class="splash-content">
+      <h1 class="splash-header"> Festimates </h1>
+      <progress id="js-progressbar" class="progress-bar" value="10" max="100"></progress>
+    </section>
+  </main>
+
+  <script>
+    let progressBar = function () {
+      let bar = document.getElementById('js-progressbar');
+      let animate = setInterval(function () {
+
+      bar.value += 25;
+
+      if (bar.value >= 75) {
+
+        setInterval(function () {
+          bar.value = 100;
+          setInterval(function () {
+            clearInterval(animate);
+            window.location.href = "Pages/Login.html";
+          }, 500);
+        }, 1000);
+      }
+
+    }, 500);
+
+  };
+
+  progressBar();
+  </script>
+</body>
+</html>
